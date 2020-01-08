@@ -60,29 +60,30 @@ const LoginModal = ({ setModal }) => {
           value={data.password}
           onChange={handleChangeForm}
         />
-        <div className={classes.formControl}>
-          <FormControl>
-            <Select
-              placeholder="Role"
-              labelId="demo-controlled-open-select-label"
-              id="demo-controlled-open-select"
-              open={openMenu}
-              onClose={handleClose}
-              onOpen={handleOpen}
-              value={data.role}
-              name="role"
-              onChange={handleChangeForm}
-              className={classes.dropDownMenu}
-            >
-              <MenuItem value="None">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value="Misha">Misha</MenuItem>
-              <MenuItem value="Alesha">Alesha</MenuItem>
-              <MenuItem value="Alexei">Alexei</MenuItem>
-            </Select>
-          </FormControl>
-        </div>
+
+        <FormControl fullWidth variant="outlined">
+          <Select
+            placeholder="Role"
+            labelId="demo-controlled-open-select-label"
+            id="demo-controlled-open-select"
+            open={openMenu}
+            onClose={handleClose}
+            onOpen={handleOpen}
+            value={data.role}
+            name="role"
+            style={{ padding: 0 }}
+            onChange={handleChangeForm}
+            className={classes.dropDownMenu}
+          >
+            <MenuItem value="None">
+              <em>None</em>
+            </MenuItem>
+            <MenuItem value="Misha">Misha</MenuItem>
+            <MenuItem value="Alesha">Alesha</MenuItem>
+            <MenuItem value="Alexei">Alexei</MenuItem>
+          </Select>
+        </FormControl>
+
         <Button
           type="submit"
           fullWidth

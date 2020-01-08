@@ -57,7 +57,8 @@ const useStyles = makeStyles(theme => ({
 
   dropDownMenu: {
     width: '100%',
-    margin: '1rem'
+    margin: '1rem 0',
+    padding: '0.6rem'
   },
 
   linkedin: {
