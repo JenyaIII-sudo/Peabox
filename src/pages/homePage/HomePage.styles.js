@@ -6,13 +6,17 @@ const useStyles = makeStyles(theme => ({
     fontSize: "20px",
     width: "60%",
     borderRadius: "12px",
-    margin: theme.spacing(1)
+    margin: theme.spacing(1),
+    color: "white",
+    textTransform: "none"
   },
   login: {
     fontSize: "20px",
     width: "60%",
     borderRadius: "12px",
-    margin: theme.spacing(1)
+    margin: theme.spacing(1),
+    color: "white",
+    textTransform: "none"
   },
   margin: {
     margin: theme.spacing(1),

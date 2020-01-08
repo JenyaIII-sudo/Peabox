@@ -5,7 +5,7 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(1),
     width: "80vh",
     background: "white",
-    opacity: "0.3",
+    opacity: "0.7",
     borderRadius: "12px"
   }
 }));
