@@ -1,12 +1,23 @@
-import React from "react";
-import Button from "@material-ui/core/Button";
-import useStyles from "./HomePage.styles";
-import SearchBar from "../../components/SearchBar/SearchBar.component";
-import HomePageLinks from "../../components/SearchBar/HomePageLinks/HomePageLinks.component";
-import Grid from "@material-ui/core/Grid";
+import React, { useState } from 'react';
+import Button from '@material-ui/core/Button';
+import useStyles from './HomePage.styles';
+import SearchBar from '../../components/SearchBar/SearchBar.component';
+import HomePageLinks from '../../components/SearchBar/HomePageLinks/HomePageLinks.component';
+import Grid from '@material-ui/core/Grid';
+import AuthModal from '../../components/authModal/AuthModal.component';
 
 const HomePage = () => {
   const classes = useStyles();
+  const [open, setOpen] = useState(false);
+  const [modal, setModal] = useState('login');
+  const handleOpenModal = e => {
+    setModal(e.currentTarget.name);
+    setOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpen(false);
+  };
 
   return (
     <div className="container">
@@ -17,7 +28,12 @@ const HomePage = () => {
               <h2 className="logo-name"></h2>
             </div>
             <div className="nav-loginIn">
-              <Button className={classes.login} size="medium">
+              <Button
+                className={classes.login}
+                size="medium"
+                name="login"
+                onClick={handleOpenModal}
+              >
                 Login
               </Button>
               <Button
@@ -25,6 +41,8 @@ const HomePage = () => {
                 size="medium"
                 variant="contained"
                 color="primary"
+                name="registration"
+                onClick={handleOpenModal}
                 disableElevation
               >
                 Join
@@ -43,6 +61,12 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      <AuthModal
+        open={open}
+        modal={modal}
+        setModal={setModal}
+        handleClose={handleCloseModal}
+      />
     </div>
   );
 };

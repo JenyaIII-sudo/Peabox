@@ -1,6 +1,6 @@
-import React from "react";
-import Grid from "@material-ui/core/Grid";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Grid from '@material-ui/core/Grid';
+import { Link } from 'react-router-dom';
 
 const HomePageLinks = () => {
   return (
@@ -10,22 +10,22 @@ const HomePageLinks = () => {
           <a className="firstLink">Most popular</a>
         </Grid>
         <Grid container item xs={6} md={2} lg={2}>
-          <Link>
+          <Link to="#">
             <span>Culture</span>
           </Link>
         </Grid>
         <Grid container item xs={6} md={2} lg={2}>
-          <Link>
+          <Link to="#">
             <span>Founder</span>
           </Link>
         </Grid>
         <Grid container item xs={6} md={2} lg={2}>
-          <Link>
+          <Link to="#">
             <span>Product</span>
           </Link>
         </Grid>
         <Grid container item xs={6} md={2} lg={2}>
-          <Link>
+          <Link to="#">
             <span>Careers</span>
           </Link>
         </Grid>

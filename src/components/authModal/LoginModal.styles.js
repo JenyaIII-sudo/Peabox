@@ -79,7 +79,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   companySide: {
-    height: '100%',
+    height: '75vh',
     width: '100%',
     borderRadius: '15px 0 0 15px',
     background: `linear-gradient(0deg, rgba(239,239,239,1) 0%, rgba(255,255,255,1) 100%)`
