@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import AuthModal from './components/authModal/AuthModal.component';
+import React from "react";
+import "./App.css";
+import HomePage from "./pages/homePage/HomePage.";
+import { BrowserRouter as Router } from "react-router-dom";
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -13,27 +15,11 @@ const App = () => {
     setOpen(false);
   };
   return (
-    <div>
-      <button type="button" name="login" onClick={handleOpenModal}>
-        Login
-      </button>
-      <button type="button" name="registration" onClick={handleOpenModal}>
-        Join
-      </button>
-      <button
-        type="button"
-        name="registrationBusiness"
-        onClick={handleOpenModal}
-      >
-        Join Business
-      </button>
-      <AuthModal
-        handleClose={handleCloseModal}
-        modal={modal}
-        open={open}
-        setModal={setModal}
-      />
-    </div>
+    <Router>
+      <div className="App">
+        <HomePage />
+      </div>
+    </Router>
   );
 };
 
