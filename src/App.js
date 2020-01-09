@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import './App.css';
-import HomePage from './pages/homePage/HomePage.';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from "react";
+import "./App.css";
+import HomePage from "./pages/homePage/HomePage.";
+import { BrowserRouter as Router } from "react-router-dom";
 
 const App = () => {
   return (

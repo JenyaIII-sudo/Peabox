@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
-import Button from '@material-ui/core/Button';
-import useStyles from './HomePage.styles';
-import SearchBar from '../../components/SearchBar/SearchBar.component';
-import HomePageLinks from '../../components/SearchBar/HomePageLinks/HomePageLinks.component';
-import Grid from '@material-ui/core/Grid';
-import AuthModal from '../../components/authModal/AuthModal.component';
+import React, { useState } from "react";
+import useStyles from "./HomePage.styles";
+import SearchBar from "../../components/SearchBar/SearchBar.component";
+import HomePageLinks from "../../components/SearchBar/HomePageLinks/HomePageLinks.component";
+import Grid from "@material-ui/core/Grid";
+import AuthModal from "../../components/authModal/AuthModal.component";
+import peaboxlogo from "../../images/peaboxlogo.png";
+import Logo from "../../components/logo/Logo.component";
+import FilterSearchBar from "../../components/filterSearchBar/FilterSearchBar";
+import LoginOrJoin from "../../components/loginOrJoin/loginOrJoin";
 
 const HomePage = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
-  const [modal, setModal] = useState('login');
+  const [modal, setModal] = useState("login");
   const handleOpenModal = e => {
     setModal(e.currentTarget.name);
     setOpen(true);
@@ -22,43 +25,31 @@ const HomePage = () => {
   return (
     <div className="container">
       <div className="row">
-        <div className="header">
-          <div className="nav">
-            <div className="logo">
-              <h2 className="logo-name"></h2>
-            </div>
-            <div className="nav-loginIn">
-              <Button
-                className={classes.login}
-                size="medium"
-                name="login"
-                onClick={handleOpenModal}
-              >
-                Login
-              </Button>
-              <Button
-                className={classes.join}
-                size="medium"
-                variant="contained"
-                color="primary"
-                name="registration"
-                onClick={handleOpenModal}
-                disableElevation
-              >
-                Join
-              </Button>
-            </div>
+        <div className={classes.header}>
+          <div className={classes.nav}>
+            <Grid container>
+              <Grid item xs={12} md={6} lg={5}>
+                <div className={classes.logo}>
+                  <Logo peaboxlogo={peaboxlogo} />
+                </div>
+              </Grid>
+              <Grid item xs={4} md={3} lg={5}>
+                <LoginOrJoin handleOpenModal={handleOpenModal} />
+              </Grid>
+            </Grid>
           </div>
-          <div className="header-search">
+          <div className={classes.headerSearch}>
             <Grid container>
               <SearchBar />
               <HomePageLinks />
             </Grid>
           </div>
-          <div className="main">
-            <div className="nav-bar"></div>
-            <div className="cads"></div>
+          <div className={classes.filterBar}>
+            <Grid container>
+              <FilterSearchBar handleOpenModal={handleOpenModal} />
+            </Grid>
           </div>
+          <div className={classes.main}></div>
         </div>
       </div>
       <AuthModal

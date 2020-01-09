@@ -1,29 +1,49 @@
 import { makeStyles } from "@material-ui/core/styles";
+import backgroundHeader from "../../images/bank-blur-business-buy-259200.jpg";
 
 const useStyles = makeStyles(theme => ({
-  join: {
-    backgroundColor: "#4be295",
-    fontSize: "20px",
-    width: "60%",
-    borderRadius: "12px",
-    margin: theme.spacing(1),
-    color: "white",
-    textTransform: "none"
+  nav: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center"
   },
-  login: {
-    fontSize: "20px",
-    width: "60%",
-    borderRadius: "12px",
-    margin: theme.spacing(1),
-    color: "white",
-    textTransform: "none"
+  main: {
+    height: "100vh"
   },
-  margin: {
-    margin: theme.spacing(1),
-    width: "70vh",
-    background: "white",
-    opacity: "0.3",
-    borderRadius: "12px"
+  headerSearch: {
+    height: "100%",
+    display: "flex",
+    alignItems: "center"
+  },
+  firstLink: {
+    fontSize: "23px",
+    padding: "8px 20px"
+  },
+  filterBar: {
+    height: "10%",
+    borderBottom: "1px solid",
+    display: "flex",
+
+    alignItems: "center"
+  },
+  logo: {
+    alignSelf: "flex-start",
+    fontSize: "59px",
+    margin: "0px",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    height: "7vh"
+  },
+  filterLoginIn: {
+    paddingRight: "59px",
+    display: "flex"
+  },
+  header: {
+    background: `url(${backgroundHeader})`,
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    height: "100vh"
   }
 }));
 

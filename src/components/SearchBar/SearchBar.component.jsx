@@ -2,7 +2,6 @@ import React from "react";
 import useStyles from "./SearchBar.Styles";
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
-import HomePageLinks from "./HomePageLinks/HomePageLinks.component";
 
 const SearchBar = () => {
   const classes = useStyles();
@@ -10,18 +9,20 @@ const SearchBar = () => {
   return (
     <Grid container>
       <Grid container item xs={12}>
-        <div className="search-title">
-          <h1>Company Stories</h1>
-          <p>in peasized, snackable vids</p>
+        <div className={classes.searchTitle}>
+          <h1 className={classes.title}>Company Stories</h1>
+          <p className={classes.titleContent}>in peasized, snackable vids</p>
         </div>
       </Grid>
       <Grid item xs={12}>
-        <div className="search-bar">
-          <TextField
-            className={classes.margin}
-            label="FinTech"
-            variant="outlined"
-          />
+        <div className={classes.searchBar}>
+          <form>
+            <TextField
+              className={classes.searchInput}
+              label="FinTech"
+              variant="outlined"
+            />
+          </form>
         </div>
       </Grid>
     </Grid>
