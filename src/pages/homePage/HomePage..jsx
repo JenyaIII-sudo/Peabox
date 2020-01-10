@@ -1,18 +1,32 @@
 import React, { useState } from "react";
 import useStyles from "./HomePage.styles";
-import SearchBar from "../../components/SearchBar/SearchBar.component";
-import HomePageLinks from "../../components/SearchBar/HomePageLinks/HomePageLinks";
-import Grid from "@material-ui/core/Grid";
-import AuthModal from "../../components/authModal/AuthModal.component";
-import peaboxlogo from "../../images/peaboxlogo.png";
-import Logo from "../../components/logo/Logo.component";
-import FilterSearchBar from "../../components/filterSearchBar/FilterSearchBar";
-import LoginOrJoin from "../../components/loginOrJoin/loginOrJoin";
+import SearchBar from "../../Components/SearchBar/SearchBar";
+import AuthModal from "../../Components/AuthModal/AuthModal.component";
+import FilterSearchBar from "../../Components/FilterSearchBar/FilterSearchBar";
 
-import Header from "../../components/Header";
+import Header from "../../Components/Header";
+import SwipeableFilter from "../../Components/SwipeableFilter";
 
 const HomePage = () => {
   const classes = useStyles();
+
+  const initialLinks = [
+    { name: "Culture" },
+    { name: "Founder" },
+    { name: "Product" },
+    { name: "Careers" },
+    { name: "Careers" },
+    { name: "Careers" },
+    { name: "Careers" },
+    { name: "Careers" },
+    { name: "Careers" },
+    { name: "Careers" },
+    { name: "Careers" },
+    { name: "Careers" },
+    { name: "Careers" }
+  ];
+
+  const [pageLinks, setPageLinks] = useState(initialLinks);
   const [open, setOpen] = useState(false);
   const [modal, setModal] = useState("login");
   const handleOpenModal = e => {
@@ -25,11 +39,23 @@ const HomePage = () => {
   };
 
   return (
-    <div className={classes.bgForHeaderAndStoriesBlock}>
-      <Header />
-      <SearchBar />
+    <div className="container">
+      <div className="row">
+        <div className={classes.bgForHeaderAndStoriesBlock}>
+          <Header handleOpenModal={handleOpenModal} />
+          <SearchBar link={pageLinks} />
+        </div>
+        <FilterSearchBar handleOpenModal={handleOpenModal} />
+        <AuthModal
+          open={open}
+          modal={modal}
+          setModal={setModal}
+          handleClose={handleCloseModal}
+        />
+        <SwipeableFilter link={pageLinks} />
+      </div>
     </div>
-    // <div className="container">
+    /* // <div className="container">
     //   <div className="row">
     //     <div className={classes.header}>
     //       <div className={classes.nav}>
@@ -57,14 +83,7 @@ const HomePage = () => {
     //       </div>
     //       <div className={classes.main}></div>
     //     </div>
-    //   </div>
-    //   <AuthModal
-    //     open={open}
-    //     modal={modal}
-    //     setModal={setModal}
-    //     handleClose={handleCloseModal}
-    //   />
-    // </div>
+    //   </div> */
   );
 };
 

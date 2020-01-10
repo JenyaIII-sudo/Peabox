@@ -1,6 +1,4 @@
-import {
-  makeStyles
-} from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import backgroundHeader from "../../images/bank-blur-business-buy-259200.jpg";
 
 const useStyles = makeStyles(theme => ({
@@ -39,13 +37,6 @@ const useStyles = makeStyles(theme => ({
   filterLoginIn: {
     paddingRight: "59px",
     display: "flex"
-  },
-  header: {
-    background: `url(${backgroundHeader})`,
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    height: "100vh"
   },
   bgForHeaderAndStoriesBlock: {
     background: `url(${backgroundHeader})`,

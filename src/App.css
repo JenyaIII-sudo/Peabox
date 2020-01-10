@@ -9,3 +9,12 @@
 .MuiOutlinedInput-root {
   border-radius: 8px !important;
 }
+.swiper-container {
+  height: 8vh;
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+}

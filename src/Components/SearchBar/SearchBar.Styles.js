@@ -1,19 +1,16 @@
-import {
-  makeStyles
-} from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
   searchInput: {
     margin: theme.spacing(1),
     width: "80vh",
-    background: "white",
-    opacity: "0.7",
+    background: "#ffffffb0",
     borderRadius: "12px",
     "& .MuiOutlinedInput-root": {
       height: "64px"
     },
-    "& .MuiInputLabel-outlined": {
-      fontSize: "24px !important"
+    "& .MuiOutlinedInput-input": {
+      fontSize: "24px"
     }
   },
   searchBar: {
@@ -25,7 +22,8 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    flexDirection: "column"
+    flexDirection: "column",
+    alignSelf: "flex-end"
   },
   title: {
     fontSize: "5rem",
@@ -37,7 +35,15 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: "33px"
   },
   gridContainer: {
-    height: "100vh"
+    height: "100vh",
+    justifyContent: "center",
+    alignItems: "normal"
+  },
+  pageLinksContainer: {
+    display: "flex",
+    justifyContent: "center",
+    width: "auto !important",
+    flexWrap: "wrap"
   }
 }));
 
