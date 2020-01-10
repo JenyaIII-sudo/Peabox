@@ -7,7 +7,7 @@ const HomePageLinks = () => {
   const classes = useStyles();
   return (
     <div className={classes.linkTabs}>
-      <Grid container spacing={3}>
+      <Grid container spacing={1}>
         <Grid container item xs={12} md={2} lg={3}>
           <a className={classes.firstTab}>Most popular</a>
         </Grid>

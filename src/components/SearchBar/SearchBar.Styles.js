@@ -1,4 +1,6 @@
-import { makeStyles } from "@material-ui/core/styles";
+import {
+  makeStyles
+} from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
   searchInput: {
@@ -33,6 +35,9 @@ const useStyles = makeStyles(theme => ({
     fontSize: "2rem",
     margin: "0",
     paddingBottom: "33px"
+  },
+  gridContainer: {
+    height: "100vh"
   }
 }));
 
