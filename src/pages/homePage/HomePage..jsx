@@ -6,12 +6,13 @@ import FilterSearchBar from "../../Components/FilterSearchBar/FilterSearchBar";
 
 import Header from "../../Components/Header";
 import SwipeableFilter from "../../Components/SwipeableFilter";
+import VideoCards from "../../Components/VideoCards";
 
 const HomePage = () => {
   const classes = useStyles();
 
-  const initialLinks = [
-    { name: "Culture" },
+  const [pageLinks, setPageLinks] = useState([
+    { name: "All" },
     { name: "Founder" },
     { name: "Product" },
     { name: "Careers" },
@@ -24,9 +25,13 @@ const HomePage = () => {
     { name: "Careers" },
     { name: "Careers" },
     { name: "Careers" }
-  ];
-
-  const [pageLinks, setPageLinks] = useState(initialLinks);
+  ]);
+  const [searchFilter, setSearchFilter] = useState([
+    { name: "Culture" },
+    { name: "Founder" },
+    { name: "Product" },
+    { name: "Careers" }
+  ]);
   const [open, setOpen] = useState(false);
   const [modal, setModal] = useState("login");
   const handleOpenModal = e => {
@@ -43,7 +48,7 @@ const HomePage = () => {
       <div className="row">
         <div className={classes.bgForHeaderAndStoriesBlock}>
           <Header handleOpenModal={handleOpenModal} />
-          <SearchBar link={pageLinks} />
+          <SearchBar searchFilter={searchFilter} />
         </div>
         <FilterSearchBar handleOpenModal={handleOpenModal} />
         <AuthModal
@@ -53,6 +58,7 @@ const HomePage = () => {
           handleClose={handleCloseModal}
         />
         <SwipeableFilter link={pageLinks} />
+        <VideoCards />
       </div>
     </div>
     /* // <div className="container">

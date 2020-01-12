@@ -25,6 +25,19 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "column",
     alignSelf: "flex-end"
   },
+  filterTitle: {
+    fontSize: "20px",
+    alignSelf: "flex-end",
+    padding: "8px 20px",
+    margin: "10px",
+    transition: "0.3s",
+    cursor: "pointer",
+    whiteSpace: "nowrap",
+    "&:hover": {
+      color: "#694b19",
+      transition: "0.3s"
+    }
+  },
   title: {
     fontSize: "5rem",
     margin: "0px"

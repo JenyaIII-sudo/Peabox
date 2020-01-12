@@ -11,6 +11,11 @@ const useStyles = makeStyles(theme => ({
       padding: "0 5px"
     }
   },
+  searchInput: {
+    backgroundColor: "#8080804f",
+    borderRadius: "8px"
+  },
+
   gridContainer: {
     height: "100%"
   },

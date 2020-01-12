@@ -20,21 +20,6 @@ const useStyles = makeStyles(theme => ({
       color: "#694b19",
       transition: "0.3s"
     }
-  },
-  firstTab: {
-    fontSize: "23px",
-    padding: "8px 20px",
-    margin: "10px",
-    textDecoration: "none",
-    color: "black",
-    transition: "0.3s",
-    fontSize: "18px",
-    cursor: "pointer",
-    whiteSpace: "nowrap",
-    "&:hover": {
-      color: "#694b19",
-      transition: "0.3s"
-    }
   }
 }));
 

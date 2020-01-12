@@ -4,11 +4,12 @@ import Swiper from "react-id-swiper";
 import "swiper/css/swiper.css";
 import useStyles from "./Styles";
 import HomePageLink from "../SearchBar/HomePageLink";
+import SortBy from "./SortBy/SortBy";
 
 const SwipeableFilter = ({ link }) => {
   const classes = useStyles();
   const params = {
-    slidesPerView: 2,
+    slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 30,
     grabCursor: true,
@@ -18,9 +19,9 @@ const SwipeableFilter = ({ link }) => {
     }
   };
   return (
-    <div className={classes.homehomeSwipeableFilter}>
+    <div className={classes.homeSwipeableFilter}>
       <Grid container>
-        <Grid item xs={8}>
+        <Grid item xs={9}>
           <Swiper {...params}>
             {link.map(item => (
               <div className={classes.filterItem}>
@@ -28,6 +29,10 @@ const SwipeableFilter = ({ link }) => {
               </div>
             ))}
           </Swiper>
+        </Grid>
+        <Grid item xs={3} className={classes.sortBy}>
+          <span className={classes.sortTitle}>Order by</span>
+          <SortBy />
         </Grid>
       </Grid>
     </div>

@@ -19,8 +19,8 @@ const FilterSearchBar = ({ handleOpenModal }) => {
         <Grid item xs={12} sm={6} className={classes.searchWrapper}>
           <form className={classes.form}>
             <TextField
+              className={classes.searchInput}
               fullWidth
-              id="outlined-basic"
               placeholder="Search"
               variant="outlined"
               InputProps={{

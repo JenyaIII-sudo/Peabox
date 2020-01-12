@@ -6,10 +6,8 @@ import HomePageLink from "./HomePageLink";
 import SearchIcon from "@material-ui/icons/Search";
 import InputAdornment from "@material-ui/core/InputAdornment";
 
-const SearchBar = ({ link }) => {
+const SearchBar = ({ searchFilter }) => {
   const classes = useStyles();
-
-  console.log("LIIIINK", link);
 
   return (
     <Grid container className={classes.gridContainer}>
@@ -35,7 +33,8 @@ const SearchBar = ({ link }) => {
           />
         </form>
         <Grid item xs={12} className={classes.pageLinksContainer}>
-          {link.map(item => (
+          <span className={classes.filterTitle}>Most popular</span>
+          {searchFilter.map(item => (
             <Grid container item xs={6} sm={3} md={2} lg={1}>
               <Grid container item xs={6} sm={3} md={2} lg={2}>
                 <HomePageLink link={item.name} />
