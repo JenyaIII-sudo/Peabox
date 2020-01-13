@@ -1,15 +1,20 @@
 import React from "react";
-import Grid from "@material-ui/core/Grid";
 import { Link } from "react-router-dom";
 import useStyles from "./HomePageLink.Styles";
 
-const HomePageLink = ({ link }) => {
+const HomePageLink = ({ link, theme }) => {
   const classes = useStyles();
   console.log("WHAT?", link);
 
+  let defaultClass = classes.linkTabsContent;
+
+  if (theme === "sliderTheme") {
+    defaultClass = classes.sliderTabs;
+  }
+
   return (
     <div className={classes.linkTabs}>
-      <Link to="#" className={classes.linkTabsContent}>
+      <Link to="#" className={(defaultClass, classes.test)}>
         <span>{link}</span>
       </Link>
     </div>

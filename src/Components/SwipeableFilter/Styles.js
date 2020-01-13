@@ -2,9 +2,8 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(() => ({
   homeSwipeableFilter: {
-    height: "9vh",
     borderColor: "lightgrey",
-    border: "2px solid",
+    borderTop: "1px solid",
     display: "flex",
     justifyContent: "center",
     alignItems: "center"
@@ -22,13 +21,17 @@ const useStyles = makeStyles(() => ({
   sortBy: {
     display: "flex",
     justifyContent: "flex-end",
-    borderLeft: "2px solid",
-    borderColor: "lightgrey"
+    borderLeft: "1px solid",
+    borderColor: "lightgrey",
+    height: "9vh",
+    alignItems: "center"
   },
   sortTitle: {
     fontSize: "20px",
     color: "gray",
-    alignSelf: "center"
+    alignSelf: "center",
+    paddingRight: "10px",
+    whiteSpace: "nowrap"
   }
 }));
 

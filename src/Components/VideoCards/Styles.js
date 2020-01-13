@@ -2,10 +2,18 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(() => ({
   cardsGrid: {
-    height: "18vh"
+    height: "auto",
+    borderTop: "1px solid",
+    borderColor: "lightgrey"
   },
   gridContainer: {
-    paddingTop: "40px"
+    padding: "1rem"
+  },
+  mediaCard: {
+    "& img": {
+      maxWidth: "100%",
+      height: "auto"
+    }
   }
 }));
 

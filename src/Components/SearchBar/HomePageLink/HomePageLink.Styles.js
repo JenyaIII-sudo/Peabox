@@ -20,6 +20,26 @@ const useStyles = makeStyles(theme => ({
       color: "#694b19",
       transition: "0.3s"
     }
+  },
+
+  sliderTabs: {
+    margin: theme.spacing(1),
+    border: "1px solid #ddd",
+    color: "#ddd",
+    borderRadius: "4px",
+    fontSize: "22px",
+    padding: "8px 20px",
+    textDecoration: "none",
+    transition: "0.3s",
+    "&:hover": {
+      borderRadius: "8px",
+      color: "#694b19",
+      transition: "0.3s"
+    }
+  },
+
+  test: {
+    color: "red !important"
   }
 }));
 

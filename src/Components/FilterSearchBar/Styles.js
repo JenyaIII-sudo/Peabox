@@ -4,7 +4,6 @@ const useStyles = makeStyles(theme => ({
   filterBarContent: {
     display: "flex",
     alignItems: "center",
-    height: "11vh",
     boxSizing: "border-box",
     padding: "0 40px",
     "@media screen and (max-width: 750px)": {
@@ -12,7 +11,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   searchInput: {
-    backgroundColor: "#8080804f",
+    backgroundColor: "#80808026",
     borderRadius: "8px"
   },
 
@@ -41,7 +40,10 @@ const useStyles = makeStyles(theme => ({
     borderRadius: "12px",
     margin: theme.spacing(1),
     color: "white",
-    textTransform: "none"
+    textTransform: "none",
+    "&.MuiButton-contained": {
+      boxShadow: "none"
+    }
   },
   login: {
     fontSize: "20px",

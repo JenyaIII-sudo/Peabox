@@ -4,7 +4,7 @@ const useStyles = makeStyles(theme => ({
   searchInput: {
     margin: theme.spacing(1),
     width: "80vh",
-    background: "#ffffffb0",
+    background: "#ffffff85",
     borderRadius: "12px",
     "& .MuiOutlinedInput-root": {
       height: "64px"
@@ -30,13 +30,7 @@ const useStyles = makeStyles(theme => ({
     alignSelf: "flex-end",
     padding: "8px 20px",
     margin: "10px",
-    transition: "0.3s",
-    cursor: "pointer",
-    whiteSpace: "nowrap",
-    "&:hover": {
-      color: "#694b19",
-      transition: "0.3s"
-    }
+    whiteSpace: "nowrap"
   },
   title: {
     fontSize: "5rem",
