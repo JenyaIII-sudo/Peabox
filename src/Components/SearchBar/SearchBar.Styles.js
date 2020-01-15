@@ -23,7 +23,8 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    alignSelf: "flex-end"
+    alignSelf: "flex-end",
+    color: "#424242"
   },
   filterTitle: {
     fontSize: "20px",

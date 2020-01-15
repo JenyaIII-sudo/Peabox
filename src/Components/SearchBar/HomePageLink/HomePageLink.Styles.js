@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
   linkTabsContent: {
     margin: theme.spacing(1),
     border: "1px solid",
-    color: "black",
+    color: "#424242",
     borderRadius: "4px",
     fontSize: "22px",
     padding: "8px 20px",
@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     transition: "0.3s",
     "&:hover": {
       borderRadius: "8px",
-      color: "#694b19",
+      color: "#ab2020",
       transition: "0.3s"
     }
   },

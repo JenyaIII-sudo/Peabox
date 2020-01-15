@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-import backgroundHeader from "../../images/bank-blur-business-buy-259200.jpg";
+import backgroundHeader from "../../images/luca-bravo-alS7ewQ41M8-unsplash.jpg";
 
 const useStyles = makeStyles(theme => ({
   nav: {

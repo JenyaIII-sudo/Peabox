@@ -10,7 +10,8 @@ const useStyles = makeStyles(theme => ({
     }
   },
   userName: {
-    alignSelf: "center"
+    alignSelf: "center",
+    paddingLeft: "10px"
   }
 }));
 
