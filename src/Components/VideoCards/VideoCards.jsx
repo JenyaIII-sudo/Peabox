@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Grid from "@material-ui/core/Grid";
 import Masonry from "react-masonry-css";
 import UseStyles from "./Styles";
+import UserCardInfo from "../UserCardInfo";
 
 const VideoCards = () => {
   const classes = UseStyles();
@@ -55,8 +56,9 @@ const VideoCards = () => {
               columnClassName="my-masonry-grid_column"
             >
               {cardsContent.map(item => (
-                <div className={classes.mediaCard}>
+                <div className="media-card">
                   <img src={item.content} alt="" />
+                  <UserCardInfo />
                 </div>
               ))}
             </Masonry>

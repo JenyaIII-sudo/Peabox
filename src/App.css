@@ -40,4 +40,31 @@
   background: #ddd;
   padding: 20px;
   margin-bottom: 30px;
+  border-radius: 8px;
+}
+.user-info {
+  align-items: center;
+  display: flex;
+  opacity: 0;
+  visibility: visible;
+  transition: 0.55s opacity, 0.55s visibility;
+}
+.media-card img {
+  max-width: 100%;
+  height: auto;
+}
+.media-card:hover .user-info {
+  opacity: 1;
+  visibility: visible;
+}
+.MuiTooltip-popper {
+  left: -20px !important;
+  width: 20%;
+}
+.MuiTooltip-tooltip {
+  background-color: white !important;
+}
+.MuiTooltip-arrow {
+  color: white !important;
+  left: 28px !important;
 }

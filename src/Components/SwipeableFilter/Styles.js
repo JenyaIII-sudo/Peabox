@@ -13,10 +13,10 @@ const useStyles = makeStyles(() => ({
   },
   filterItem: {
     border: "1px solid",
-    width: "150px !important",
     borderColor: "white",
     marginRight: "0px !important",
     paddingBottom: "17px"
+    // width: "15% !important"
   },
   sortBy: {
     display: "flex",

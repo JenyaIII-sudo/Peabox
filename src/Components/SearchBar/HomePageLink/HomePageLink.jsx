@@ -14,7 +14,7 @@ const HomePageLink = ({ link, theme }) => {
 
   return (
     <div className={classes.linkTabs}>
-      <Link to="#" className={(defaultClass, classes.test)}>
+      <Link to="#" className={defaultClass}>
         <span>{link}</span>
       </Link>
     </div>

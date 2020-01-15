@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
   sliderTabs: {
     margin: theme.spacing(1),
     border: "1px solid #ddd",
-    color: "#ddd",
+    color: "grey",
     borderRadius: "4px",
     fontSize: "22px",
     padding: "8px 20px",
@@ -33,6 +33,7 @@ const useStyles = makeStyles(theme => ({
     transition: "0.3s",
     "&:hover": {
       borderRadius: "8px",
+      borderColor: "#694b19",
       color: "#694b19",
       transition: "0.3s"
     }

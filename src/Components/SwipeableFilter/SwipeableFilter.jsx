@@ -9,14 +9,8 @@ import SortBy from "./SortBy/SortBy";
 const SwipeableFilter = ({ link }) => {
   const classes = useStyles();
   const params = {
-    slidesPerView: 1,
-    centeredSlides: true,
-    spaceBetween: 30,
-    grabCursor: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    }
+    slidesPerView: 6,
+    grabCursor: true
   };
   return (
     <div className={classes.homeSwipeableFilter}>
@@ -25,7 +19,9 @@ const SwipeableFilter = ({ link }) => {
           <Swiper {...params}>
             {link.map(item => (
               <div className={classes.filterItem}>
-                <HomePageLink link={item.name} theme={"sliderTheme"} />
+                <Grid item xs={12} sm={12} md={2} lg={1}>
+                  <HomePageLink link={item.name} theme={"sliderTheme"} />
+                </Grid>
               </div>
             ))}
           </Swiper>
