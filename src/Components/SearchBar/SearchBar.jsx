@@ -32,13 +32,28 @@ const SearchBar = ({ searchFilter }) => {
             }}
           />
         </form>
-        <Grid item xs={12} className={classes.pageLinksContainer}>
-          <span className={classes.filterTitle}>Most popular</span>
+        <Grid container item xs={12} className={classes.pageLinksContainer}>
+          <Grid
+            container
+            item
+            xs={12}
+            sm={12}
+            md={2}
+            lg={1}
+            className={classes.titlePagesLink}
+          >
+            <span className={classes.filterTitle}>Most popular</span>
+          </Grid>
           {searchFilter.map(item => (
-            <Grid container item xs={6} sm={3} md={2} lg={1}>
-              <Grid container item xs={6} sm={3} md={2} lg={2}>
-                <HomePageLink link={item.name} />
-              </Grid>
+            <Grid
+              item
+              xs={6}
+              sm={3}
+              md={2}
+              lg={1}
+              style={{ display: "contents" }}
+            >
+              <HomePageLink link={item.name} />
             </Grid>
           ))}
         </Grid>

@@ -24,14 +24,20 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center",
     flexDirection: "column",
     alignSelf: "flex-end",
-    color: "#424242"
+    color: "white"
   },
   filterTitle: {
     fontSize: "20px",
+    color: "white",
     alignSelf: "flex-end",
     padding: "8px 20px",
     margin: "10px",
     whiteSpace: "nowrap"
+  },
+  titlePagesLink: {
+    "@media screen and (min-width: 960px)": {
+      display: "contents"
+    }
   },
   title: {
     fontSize: "5rem",

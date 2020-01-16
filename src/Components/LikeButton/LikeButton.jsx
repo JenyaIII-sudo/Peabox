@@ -17,7 +17,6 @@ const LikeButton = () => {
       setLike(false);
     }
   };
-  console.log(like);
   return (
     <div>
       <Fab aria-label="like" onClick={likeIt}>

@@ -13,10 +13,23 @@ const useStyles = makeStyles(() => ({
   },
   filterItem: {
     border: "1px solid",
-    borderColor: "white",
+    borderColor: "#ffffff00",
     marginRight: "0px !important",
-    paddingBottom: "17px"
-    // width: "15% !important"
+    paddingBottom: "17px",
+    margin: "0px 20px"
+  },
+  allFilters: {
+    display: "flex",
+    justifyContent: "center",
+    paddingLeft: "6px",
+    "& .MuiButton-containedPrimary": {
+      color: "#4713e2",
+      textTransform: "none",
+      backgroundColor: "#2a0ad833",
+      width: "61%",
+      fontSize: "22px",
+      borderRadius: "8px"
+    }
   },
   sortBy: {
     display: "flex",
@@ -24,7 +37,10 @@ const useStyles = makeStyles(() => ({
     borderLeft: "1px solid",
     borderColor: "lightgrey",
     height: "9vh",
-    alignItems: "center"
+    alignItems: "center",
+    "@media screen and (max-width: 650px)": {
+      justifyContent: "center"
+    }
   },
   sortTitle: {
     fontSize: "20px",

@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
   linkTabsContent: {
     margin: theme.spacing(1),
     border: "1px solid",
-    color: "#424242",
+    color: "white",
     borderRadius: "4px",
     fontSize: "22px",
     padding: "8px 20px",
@@ -17,30 +17,33 @@ const useStyles = makeStyles(theme => ({
     transition: "0.3s",
     "&:hover": {
       borderRadius: "8px",
-      color: "#ab2020",
+      color: "#23dc7e",
       transition: "0.3s"
     }
   },
-
+  linkTabsInSlider: {
+    paddingTop: "18px",
+    display: "flex",
+    width: "100%"
+  },
   sliderTabs: {
-    margin: theme.spacing(1),
-    border: "1px solid #ddd",
+    display: "flex",
+    justifyContent: "center",
+    border: "2px solid #ddd",
     color: "grey",
-    borderRadius: "4px",
+    borderRadius: "8px",
     fontSize: "22px",
     padding: "8px 20px",
     textDecoration: "none",
     transition: "0.3s",
+    width: "100%",
+    whiteSpace: "nowrap",
     "&:hover": {
-      borderRadius: "8px",
-      borderColor: "#694b19",
-      color: "#694b19",
+      borderRadius: "4px",
+      borderColor: "#23dc7e",
+      color: "#23dc7e",
       transition: "0.3s"
     }
-  },
-
-  test: {
-    color: "red !important"
   }
 }));
 

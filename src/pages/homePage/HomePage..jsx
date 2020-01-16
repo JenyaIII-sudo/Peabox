@@ -12,19 +12,18 @@ const HomePage = () => {
   const classes = useStyles();
 
   const [pageLinks, setPageLinks] = useState([
-    { name: "All" },
     { name: "Founder" },
     { name: "Product" },
     { name: "Careers" },
-    { name: "Careers" },
-    { name: "Careers" },
-    { name: "Careers" },
-    { name: "Careers" },
-    { name: "Careers" },
-    { name: "Careers" },
-    { name: "Careers" },
-    { name: "Careers" },
-    { name: "Careers" }
+    { name: "Opportunity" },
+    { name: "Bundle" },
+    { name: "Activity" },
+    { name: "Call of Duty" },
+    { name: "Modern" },
+    { name: "Warfare" },
+    { name: "Mortal" },
+    { name: "Combat" },
+    { name: "Fighters" }
   ]);
   const [searchFilter, setSearchFilter] = useState([
     { name: "Culture" },

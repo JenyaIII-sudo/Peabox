@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-import backgroundHeader from "../../images/luca-bravo-alS7ewQ41M8-unsplash.jpg";
+import backgroundHeader from "../../images/hivan-arvizu-soyhivan-MAnhvw0nDDY-unsplash.jpg";
 
 const useStyles = makeStyles(theme => ({
   nav: {

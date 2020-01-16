@@ -1,5 +1,5 @@
 import React from "react";
-import Grid from "@material-ui/core/Grid";
+import { Button, Grid } from "@material-ui/core";
 import Swiper from "react-id-swiper";
 import "swiper/css/swiper.css";
 import useStyles from "./Styles";
@@ -10,18 +10,57 @@ const SwipeableFilter = ({ link }) => {
   const classes = useStyles();
   const params = {
     slidesPerView: 6,
+    breakpoints: {
+      1690: {
+        slidesPerView: 7,
+        spaceBetween: 20
+      },
+      1444: {
+        slidesPerView: 6,
+        spaceBetween: 20
+      },
+      1168: {
+        slidesPerView: 5,
+        spaceBetween: 20
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 20
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 20
+      },
+      640: {
+        slidesPerView: 4,
+        spaceBetween: 20
+      },
+      590: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      },
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      }
+    },
     grabCursor: true
   };
   return (
     <div className={classes.homeSwipeableFilter}>
       <Grid container item xs={12}>
-        <Grid item xs={12} sm={12} md={9} lg={9}>
+        <Grid item xs={3} sm={2} md={1} lg={1}>
+          <div className={classes.allFilters}>
+            <Button variant="contained" color="primary" disableElevation>
+              All
+            </Button>
+          </div>
+        </Grid>
+        <Grid item xs={9} sm={10} md={8} lg={8}>
           <Swiper {...params}>
             {link.map(item => (
               <div className={classes.filterItem}>
-                <Grid item xs={12} sm={12} md={2} lg={1}>
-                  <HomePageLink link={item.name} theme={"sliderTheme"} />
-                </Grid>
+                <HomePageLink link={item.name} theme={"sliderTheme"} />
               </div>
             ))}
           </Swiper>

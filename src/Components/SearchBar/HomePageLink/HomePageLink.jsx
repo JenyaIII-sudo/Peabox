@@ -7,13 +7,15 @@ const HomePageLink = ({ link, theme }) => {
   console.log("WHAT?", link);
 
   let defaultClass = classes.linkTabsContent;
+  let parrentDefaultClass = classes.linkTabs;
 
   if (theme === "sliderTheme") {
     defaultClass = classes.sliderTabs;
+    parrentDefaultClass = classes.linkTabsInSlider;
   }
 
   return (
-    <div className={classes.linkTabs}>
+    <div className={parrentDefaultClass}>
       <Link to="#" className={defaultClass}>
         <span>{link}</span>
       </Link>

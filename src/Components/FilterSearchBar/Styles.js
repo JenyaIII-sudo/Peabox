@@ -5,9 +5,9 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     alignItems: "center",
     boxSizing: "border-box",
-    padding: "0 40px",
+    padding: "6px 40px",
     "@media screen and (max-width: 750px)": {
-      padding: "0 5px"
+      padding: "10px 5px"
     }
   },
   searchInput: {
@@ -19,12 +19,8 @@ const useStyles = makeStyles(theme => ({
     height: "100%"
   },
   logoWrapper: {
-    "@media screen and (max-width: 600px)": {
-      display: "flex",
-      height: "100%",
-      width: "100%",
-      justifyContent: "center",
-      alignItems: "center"
+    "@media screen and (max-width: 691px)": {
+      display: "none"
     }
   },
   form: {
