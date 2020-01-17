@@ -9,6 +9,11 @@ const useStyles = makeStyles(theme => ({
       margin: theme.spacing(1)
     }
   },
+  gridContainer: {
+    "&.MuiGrid-grid-xs-12": {
+      maxWidth: "97%"
+    }
+  },
   userName: {
     alignSelf: "center",
     paddingLeft: "10px",

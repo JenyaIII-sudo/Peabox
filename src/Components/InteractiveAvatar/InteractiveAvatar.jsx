@@ -20,35 +20,14 @@ const InteractiveAvatar = () => {
   };
 
   return (
-    <Grid container justify="center">
-      <ClickAwayListener onClickAway={handleTooltipClose}>
-        <div>
-          <Grid item xs={12}>
-            <HtmlTooltip
-              className={classes.root}
-              PopperProps={{
-                disablePortal: true
-              }}
-              onClose={handleTooltipClose}
-              open={open}
-              disableFocusListener
-              disableHoverListener
-              placement="top-start"
-              title={<Profile />}
-              interactive
-              arrow
-            >
-              <Avatar
-                alt="Travis Howard"
-                src={userImg}
-                onClick={handleTooltipOpen}
-                style={{ cursor: "pointer" }}
-              />
-            </HtmlTooltip>
-          </Grid>
-        </div>
-      </ClickAwayListener>
-    </Grid>
+    <div className={classes.clickedAvatar}>
+      <Avatar
+        alt="Travis Howard"
+        src={userImg}
+        onClick={handleTooltipOpen}
+        style={{ cursor: "pointer" }}
+      />
+    </div>
   );
 };
 

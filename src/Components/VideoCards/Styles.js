@@ -10,7 +10,8 @@ const useStyles = makeStyles(() => ({
   gridContainer: {
     padding: "1rem",
     paddingRight: "40px",
-    paddingLeft: "40px"
+    paddingLeft: "40px",
+    paddingTop: "40px"
   },
   mediaCard: {
     background: `url(${Background})`,

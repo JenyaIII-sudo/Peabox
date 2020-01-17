@@ -1,19 +1,17 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
-  userInfo: {
-    alignItems: "center",
-    display: "none",
-    transition: "0.3s",
-    "& > *": {
-      margin: theme.spacing(1)
-    }
-  },
   userName: {
     alignSelf: "center",
-    whiteSpace: "nowrap",
-    color: "black",
-    fontSize: "15px"
+    paddingLeft: "10px",
+    color: "black"
+  },
+  follow: {
+    marginLeft: "8px"
+  },
+  myMasonryGridColumn: {
+    paddingLeft: "5px",
+    backgroundClip: "padding-box"
   }
 }));
 
