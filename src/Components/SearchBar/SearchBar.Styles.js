@@ -35,6 +35,7 @@ const useStyles = makeStyles(theme => ({
     whiteSpace: "nowrap"
   },
   titlePagesLink: {
+    alignSelf: "flex-end",
     "@media screen and (min-width: 960px)": {
       display: "contents"
     }

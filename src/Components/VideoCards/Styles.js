@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
+import Background from "../../images/UserCards/sammy-joonhee-9OZoT3XHRvw-unsplash.jpg";
 
 const useStyles = makeStyles(() => ({
   cardsGrid: {
@@ -12,6 +13,7 @@ const useStyles = makeStyles(() => ({
     paddingLeft: "40px"
   },
   mediaCard: {
+    background: `url(${Background})`,
     "&:hover userInfo": {
       display: "flex"
     },

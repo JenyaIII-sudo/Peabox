@@ -19,7 +19,12 @@ const LikeButton = () => {
   };
   return (
     <div>
-      <Fab aria-label="like" onClick={likeIt}>
+      <Fab
+        aria-label="like"
+        onClick={likeIt}
+        size="small"
+        className={classes.likeCircle}
+      >
         <FavoriteIcon className={like ? classes.unLikeIt : classes.likeIt} />
       </Fab>
     </div>

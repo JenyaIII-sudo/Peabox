@@ -11,7 +11,8 @@ const useStyles = makeStyles(theme => ({
   },
   userName: {
     alignSelf: "center",
-    paddingLeft: "10px"
+    paddingLeft: "10px",
+    color: "white"
   }
 }));
 
