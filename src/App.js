@@ -1,24 +1,31 @@
 import React from "react";
 import "./App.css";
+import HomePage from "./pages/homePage/HomePage.";
+import { BrowserRouter as Router } from "react-router-dom";
+import SmoothScrollbar from "smooth-scrollbar";
+import OverscrollPlugin from "smooth-scrollbar/plugins/overscroll";
+import Scrollbar from "react-smooth-scrollbar";
 
-function App() {
+SmoothScrollbar.use(OverscrollPlugin);
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Router>
+      <div className="App">
+        <Scrollbar
+          style={{ height: "100vh" }}
+          damping={0.1}
+          thumbMinSize={20}
+          syncCallbacks={true}
+          renderByPixels={true}
+          alwaysShowTracks={true}
+          continuousScrolling={true}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <HomePage />
+        </Scrollbar>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
