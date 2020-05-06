@@ -15,7 +15,9 @@
     "react-masonry-css": "^1.0.14",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
+    "react-smooth-scrollbar": "^8.0.6",
     "react-swipeable-views-core": "^0.13.1",
+    "smooth-scrollbar": "^8.5.2",
     "swiper": "^5.2.1"
   },
   "scripts": {
